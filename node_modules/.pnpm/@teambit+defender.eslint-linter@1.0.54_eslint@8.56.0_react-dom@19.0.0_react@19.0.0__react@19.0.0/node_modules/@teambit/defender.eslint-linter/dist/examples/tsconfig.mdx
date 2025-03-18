@@ -1,0 +1,10 @@
+The TS config file used by eslint should be the same as the one used by your Typescript compiler.
+This specific config extends the default TS config of a React environment.
+
+```json
+{
+  /* extend the default typescript config of the base env (in this example, react-env) */
+  "extends": "@teambit/react.react-env/config/tsconfig.json",
+  "include": ["**/*", "**/*.json"]
+}
+```

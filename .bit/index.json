@@ -1,0 +1,21 @@
+{
+  "components": [
+    {
+      "id": {
+        "scope": "bitdev.react",
+        "name": "react-env"
+      },
+      "isSymlink": false,
+      "hash": "332d61722e10572fbaef5995407ebdce773c6a7e"
+    },
+    {
+      "id": {
+        "scope": "dras.todo-app",
+        "name": "todo-item"
+      },
+      "isSymlink": false,
+      "hash": "67bbeca9b74d05b777b98d046b3d57a886b50dd0"
+    }
+  ],
+  "lanes": []
+}

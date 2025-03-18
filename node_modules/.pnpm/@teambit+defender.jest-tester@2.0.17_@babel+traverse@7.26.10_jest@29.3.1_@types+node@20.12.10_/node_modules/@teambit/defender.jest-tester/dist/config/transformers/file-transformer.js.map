@@ -1,0 +1,1 @@
+{"version":3,"file":"file-transformer.js","sourceRoot":"","sources":["../../../config/transformers/file-transformer.ts"],"names":[],"mappings":";;AAAA,+BAAgC;AAEhC,kBAAe;IACb,OAAO,EAAE,CAAC,WAAmB,EAAE,UAAkB,EAAE,EAAE;QACnD,OAAO;YACL,IAAI,EAAE,oBAAoB,IAAI,CAAC,SAAS,CAAC,IAAA,eAAQ,EAAC,UAAU,CAAC,CAAC,GAAG;SAClE,CAAC;IACJ,CAAC;CACF,CAAA"}

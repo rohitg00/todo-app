@@ -1,0 +1,3 @@
+"use strict";
+module.exports = require('./bit-react-eslint');
+//# sourceMappingURL=index.js.map

@@ -1,0 +1,39 @@
+{
+    "compilerOptions": {
+        "lib": [
+            "esnext",
+            "dom",
+            "dom.Iterable"
+        ],
+        "target": "es2020",
+        "module": "es2020",
+        "jsx": "react-jsx",
+        "declaration": true,
+        "sourceMap": true,
+        "experimentalDecorators": true,
+        "skipLibCheck": true,
+        "moduleResolution": "node",
+        "esModuleInterop": true,
+        "resolveJsonModule": true,
+        "allowJs": true,
+        "outDir": "dist",
+        "strict": true,
+        "emitDecoratorMetadata": true,
+        "preserveConstEnums": true,
+        "strictPropertyInitialization": false,
+        "noImplicitAny": false
+    },
+    "exclude": [
+        "artifacts",
+        "public",
+        "dist",
+        "node_modules",
+        "package.json",
+        "**/*.cjs",
+        "./dist"
+    ],
+    "include": [
+        "**/*",
+        "**/*.json"
+    ]
+}
