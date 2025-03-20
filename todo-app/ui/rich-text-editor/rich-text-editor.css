@@ -1,0 +1,20 @@
+/* Rich Text Editor Styles */
+.rich-text-editor-wrapper {
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.rich-text-editor-toolbar {
+  border-bottom: 1px solid #e0e0e0;
+  background-color: #f8f8f8;
+}
+
+.rich-text-editor-content {
+  padding: 10px;
+  min-height: 200px;
+}
+
+.public-DraftEditor-content {
+  min-height: 200px;
+} 

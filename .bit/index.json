@@ -15,6 +15,126 @@
       },
       "isSymlink": false,
       "hash": "67bbeca9b74d05b777b98d046b3d57a886b50dd0"
+    },
+    {
+      "id": {
+        "scope": "bitdev.node",
+        "name": "node-env"
+      },
+      "isSymlink": false,
+      "hash": "ca06bbbbe1eefa9afb10aeb40fd66d33d9477d7e"
+    },
+    {
+      "id": {
+        "scope": "bitdev.node",
+        "name": "node-server"
+      },
+      "isSymlink": false,
+      "hash": "3d9dfebc8c3985750c7421779af507d52c159d3c"
+    },
+    {
+      "id": {
+        "scope": "bitdev.react",
+        "name": "app-types/vite-react"
+      },
+      "isSymlink": false,
+      "hash": "7c7b0e8b950507675eb26a304d7d26defab275a7"
+    },
+    {
+      "id": {
+        "scope": "dras.todo-app",
+        "name": "context/apollo-client"
+      },
+      "isSymlink": false,
+      "hash": "8bc55ecacfc1f6f0d71e4de85680681c75962d27"
+    },
+    {
+      "id": {
+        "scope": "dras.todo-app",
+        "name": "context/apollo-todo-provider"
+      },
+      "isSymlink": false,
+      "hash": "89d2cc4f5b58f7e5f82e3be4ee7897f7e7379ac9"
+    },
+    {
+      "id": {
+        "scope": "dras.todo-app",
+        "name": "entities/todo-item"
+      },
+      "isSymlink": false,
+      "hash": "0dff28e96f527c2644efde80a7ef35d878bcb244"
+    },
+    {
+      "id": {
+        "scope": "dras.todo-app",
+        "name": "hooks/use-todo-list"
+      },
+      "isSymlink": false,
+      "hash": "ab8046f27419873cdd784f66d7d486ac8312b7cd"
+    },
+    {
+      "id": {
+        "scope": "dras.todo-app",
+        "name": "pages/todo-page"
+      },
+      "isSymlink": false,
+      "hash": "709a8483d78794a43e67f75d0579424e35198ef4"
+    },
+    {
+      "id": {
+        "scope": "dras.todo-app",
+        "name": "servers/todo-server"
+      },
+      "isSymlink": false,
+      "hash": "89d775b3165db56336d523d42519b9ef0165a0ad"
+    },
+    {
+      "id": {
+        "scope": "dras.todo-app",
+        "name": "todo-app"
+      },
+      "isSymlink": false,
+      "hash": "a82b0a8074f7ff27a346fe5396225241b9697cbf"
+    },
+    {
+      "id": {
+        "scope": "dras.todo-app",
+        "name": "ui/enhanced-todo-item"
+      },
+      "isSymlink": false,
+      "hash": "583c3fd131c2563ab6bb271032c403e2c37c67eb"
+    },
+    {
+      "id": {
+        "scope": "dras.todo-app",
+        "name": "ui/enhanced-todo-list"
+      },
+      "isSymlink": false,
+      "hash": "05a95fa260491d3adaae9f0b5e98514ab2eda8e1"
+    },
+    {
+      "id": {
+        "scope": "dras.todo-app",
+        "name": "ui/rich-text-editor"
+      },
+      "isSymlink": false,
+      "hash": "4de69bc16c6310f6c47e35a4eb318d56244195db"
+    },
+    {
+      "id": {
+        "scope": "dras.todo-app",
+        "name": "ui/sidebar"
+      },
+      "isSymlink": false,
+      "hash": "1726eece6bd2fed072cc257903abdc185e5eda31"
+    },
+    {
+      "id": {
+        "scope": "dras.todo-app",
+        "name": "ui/todo-list"
+      },
+      "isSymlink": false,
+      "hash": "43afaf08085461daa7d03b86bcd62a917c7317d8"
     }
   ],
   "lanes": []

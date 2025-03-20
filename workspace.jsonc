@@ -50,11 +50,23 @@
    * main configuration for component dependency resolution.
    **/
   "teambit.dependencies/dependency-resolver": {
-    "rootComponents": true,
     "policy": {
-      "dependencies": {},
+      "dependencies": {
+        "@apollo/client": "^3.13.4",
+        "@apollo/server": "^4.11.3",
+        "@apollo/subgraph": "^2.10.0",
+        "@bitdev/node.node-server": "^1.0.6",
+        "@bitdev/react.app-types.vite-react": "^2.1.4",
+        "@types/uuid": "^10.0.0",
+        "@vitejs/plugin-react": "^4.3.4",
+        "draft-js": "^0.11.7",
+        "react-draft-wysiwyg": "^1.15.0",
+        "uuid": "^11.1.0"
+      },
       "peerDependencies": {}
-    }
+    },
+    "linkCoreAspects": true,
+    "rootComponents": true
   },
   "teambit.workspace/workspace-config-files": {
     "enableWorkspaceConfigWrite": true
