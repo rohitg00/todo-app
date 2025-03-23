@@ -47,8 +47,8 @@ dras.todo-app/
 
 1. Clone the repository:
    ```bash
-   git clone <repository-url>
-   cd demo-bit/myws
+   git clone https://github.com/rohitg00/todo-app/
+   cd todo-app
    ```
 
 2. Install dependencies:
@@ -61,45 +61,89 @@ dras.todo-app/
    bit install
    ```
 
-### Development
-
-1. Start the development server:
-   ```bash
-   bit start
-   ```
-
-2. Access the Bit dev server at http://localhost:3000
-
 ## 🛠️ Component Development
 
-### Creating a New Component
+### Actual Commands Used in this Project
+
+Below is the sequence of commands used to build this project:
+
+#### Creating Components
 
 ```bash
-bit create react-component ui/my-component
+# Creating core data models and services
+bit create entity entities/todo-item
+bit create graphql-server servers/todo-server
+bit create react context/apollo-todo-provider
+bit create react-hook hooks/use-todo-list
+
+# Creating UI components
+bit create react ui/todo-list
+bit create react pages/todo-page
+bit create react-app todo-app
+bit create react ui/sidebar
+bit create react ui/rich-text-editor
+bit create react ui/enhanced-todo-item
+bit create react ui/enhanced-todo-list
+bit create react context/apollo-client
 ```
 
-### Testing Components
+#### Installing Dependencies
 
 ```bash
-bit test
+bit install uuid @types/uuid
+bit install @apollo/client
 ```
 
-### Building Components
+#### Running the Application
 
 ```bash
-bit build
+# Start the GraphQL server
+bit run todo-server
+
+# Start the React application
+bit run todo-app
 ```
 
-### Tagging Components
+#### Building and Tagging Components
 
 ```bash
-bit tag --all
+# Compile components
+bit compile
+
+# Tag components with versioning
+bit tag --message "todo app"
 ```
 
-### Exporting Components
+#### Exporting Components
 
 ```bash
+# Export components to a remote scope
 bit export
+```
+
+#### Checking Component Status
+
+```bash
+# View status of components
+bit status
+
+# List all components
+bit list
+
+# Show component details
+bit show dras.todo-app/ui/todo-list
+bit show dras.todo-app/hooks/use-todo-list
+bit show dras.todo-app/entities/todo-item
+```
+
+#### Building Components
+
+```bash
+# Build all components
+bit build
+
+# Build including unmodified components
+bit build --unmodified
 ```
 
 ## 🔍 Key Features
@@ -146,13 +190,6 @@ Custom React hook that provides todo list functionality to components.
 - Design components for reusability
 - Use composition over inheritance
 - Implement proper prop interfaces with TypeScript
-
-## 🤝 Contributing
-
-1. Create a new component or modify an existing one
-2. Tag your changes with a meaningful message
-3. Export your components to the remote scope
-4. Submit a PR with documentation of your changes
 
 ## 📄 License
 
