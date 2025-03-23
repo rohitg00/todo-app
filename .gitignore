@@ -2,3 +2,6 @@
 .tsconfig.json
 .prettierrc.cjs
 node_modules
+.bit
+.env
+
