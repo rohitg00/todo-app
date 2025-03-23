@@ -14,7 +14,12 @@
         "scope": "dras.todo-app",
         "version": "0.0.2",
         "mainFile": "index.ts",
-        "rootDir": "todo-app/context/apollo-client"
+        "rootDir": "todo-app/context/apollo-client",
+        "config": {
+            "teambit.component/remove": {
+                "removed": true
+            }
+        }
     },
     "context/apollo-todo-provider": {
         "name": "context/apollo-todo-provider",
@@ -63,21 +68,37 @@
         "scope": "dras.todo-app",
         "version": "0.0.1",
         "mainFile": "index.ts",
-        "rootDir": "todo-app/todo-item"
+        "rootDir": "todo-app/todo-item",
+        "config": {
+            "teambit.component/remove": {
+                "removed": true
+            }
+        }
     },
     "ui/enhanced-todo-item": {
         "name": "ui/enhanced-todo-item",
         "scope": "dras.todo-app",
         "version": "0.0.5",
         "mainFile": "index.ts",
-        "rootDir": "todo-app/ui/enhanced-todo-item"
+        "rootDir": "todo-app/ui/enhanced-todo-item",
+        "config": {
+            "teambit.component/remove": {
+                "removed": true,
+                "removeOnMain": true
+            }
+        }
     },
     "ui/enhanced-todo-list": {
         "name": "ui/enhanced-todo-list",
         "scope": "dras.todo-app",
         "version": "0.0.6",
         "mainFile": "index.ts",
-        "rootDir": "todo-app/ui/enhanced-todo-list"
+        "rootDir": "todo-app/ui/enhanced-todo-list",
+        "config": {
+            "teambit.component/deprecation": {
+                "deprecate": true
+            }
+        }
     },
     "ui/rich-text-editor": {
         "name": "ui/rich-text-editor",
@@ -92,6 +113,35 @@
         "version": "0.0.3",
         "mainFile": "index.ts",
         "rootDir": "todo-app/ui/sidebar"
+    },
+    "ui/todo-item": {
+        "name": "ui/todo-item",
+        "scope": "",
+        "version": "",
+        "defaultScope": "dras.todo-app",
+        "mainFile": "index.ts",
+        "rootDir": "todo-app/ui/todo-item",
+        "config": {
+            "bitdev.react/react-env@4.0.15": {},
+            "teambit.envs/envs": {
+                "env": "bitdev.react/react-env"
+            },
+            "teambit.dependencies/dependency-resolver": {},
+            "teambit.component/dev-files": {},
+            "teambit.semantics/schema": {},
+            "teambit.preview/preview": {},
+            "teambit.compositions/compositions": {},
+            "teambit.docs/docs": {},
+            "teambit.pipelines/builder": {},
+            "teambit.harmony/application": {},
+            "teambit.component/renaming": {
+                "renamedFrom": {
+                    "scope": "dras.todo-app",
+                    "name": "ui/enhanced-todo-item",
+                    "version": "0.0.5"
+                }
+            }
+        }
     },
     "ui/todo-list": {
         "name": "ui/todo-list",

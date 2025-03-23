@@ -1,8 +1,8 @@
-import { EnhancedTodoItem } from './enhanced-todo-item.js';
+import { TodoItem } from './todo-item.js';
 
-export const BasicEnhancedTodoItem = () => {
+export const BasicTodoItem = () => {
   return (
-    <EnhancedTodoItem 
+    <TodoItem 
       id="1"
       text="Complete the task"
       priority="medium"

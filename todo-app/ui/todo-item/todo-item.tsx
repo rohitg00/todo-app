@@ -10,7 +10,7 @@ export type TodoTag = {
   color: string;
 };
 
-export type EnhancedTodoItemProps = {
+export type TodoItemProps = {
   /**
    * Todo item ID
    */
@@ -181,7 +181,7 @@ const styles: Record<string, CSSProperties> = {
   }
 };
 
-export function EnhancedTodoItem({
+export function TodoItem({
   id,
   text,
   completed = false,
@@ -195,7 +195,7 @@ export function EnhancedTodoItem({
   onDueDateChange,
   onPriorityChange,
   onTagsChange
-}: EnhancedTodoItemProps) {
+}: TodoItemProps) {
   const [expanded, setExpanded] = useState(false);
   const [noteContent, setNoteContent] = useState(content);
   
