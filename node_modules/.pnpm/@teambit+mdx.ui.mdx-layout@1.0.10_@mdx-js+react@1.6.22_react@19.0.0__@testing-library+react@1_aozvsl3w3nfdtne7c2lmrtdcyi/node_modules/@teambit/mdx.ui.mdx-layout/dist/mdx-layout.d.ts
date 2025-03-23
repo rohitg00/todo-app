@@ -1,7 +1,0 @@
-import { MDXLayoutProps } from '@teambit/documenter.markdown.mdx';
-import './mdx-layout.css';
-export type { MDXProviderComponents, MDXLayoutProps } from '@teambit/documenter.markdown.mdx';
-/**
- * MDX Provider which includes documenter as design system for markdown rendering.
- */
-export declare function MDXLayout({ components, ...rest }: MDXLayoutProps): import("react/jsx-runtime").JSX.Element;
