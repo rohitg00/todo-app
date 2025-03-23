@@ -1,1 +1,0 @@
-[{"filePath":"todo-page.tsx","name":"TodoPage","description":"","properties":[{"name":"serverUrl","description":"GraphQL server URL","required":false,"type":"string"}],"access":"public","methods":[],"args":[],"examples":[]}]
