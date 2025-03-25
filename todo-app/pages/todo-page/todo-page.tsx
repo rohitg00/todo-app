@@ -1,9 +1,8 @@
 import { ApolloTodoProvider } from '@dras/todo-app.context.apollo-todo-provider';
-import { TodoList } from '@dras/todo-app.ui.todo-list';
-import { EnhancedTodoList, EnhancedTodo } from '@dras/todo-app.ui.enhanced-todo-list';
+import { TodoList, EnhancedTodo } from '@dras/todo-app.ui.todo-list';
 import { Sidebar } from '@dras/todo-app.ui.sidebar';
 import { useState, useMemo, CSSProperties } from 'react';
-import { ApolloProvider } from '@apollo/client';
+import { TodoTag } from '@dras/todo-app.ui.todo-item';
 
 // Define styles as a JavaScript object
 const styles: Record<string, CSSProperties> = {
@@ -125,12 +124,16 @@ export type TodoPageProps = {
    * GraphQL server URL
    */
   serverUrl?: string;
+  /**
+   * Use mock data (for previews)
+   */
+  mock?: boolean;
 };
 
 type PageMode = 'simple' | 'enhanced';
 type PageView = 'quick-notes' | 'my-tasks' | 'backlog';
 
-export function TodoPage({ serverUrl }: TodoPageProps) {
+export function TodoPage({ serverUrl, mock = false }: TodoPageProps) {
   const [pageMode, setPageMode] = useState<PageMode>('enhanced');
   const [currentView, setCurrentView] = useState<PageView>('quick-notes');
   const [customPages, setCustomPages] = useState<string[]>([]);
@@ -218,17 +221,18 @@ export function TodoPage({ serverUrl }: TodoPageProps) {
   const renderContent = () => {
     if (pageMode === 'simple') {
       return (
-        <ApolloTodoProvider serverUrl={serverUrl || 'http://localhost:5001/graphql'}>
-          <TodoList />
+        <ApolloTodoProvider serverUrl={serverUrl} mock={mock}>
+          <TodoList enhanced={false} />
         </ApolloTodoProvider>
       );
     }
-      return (
-        <EnhancedTodoList 
-          listId={currentView} 
-          initialTodos={getInitialTodos()} 
-        />
-      );
+    return (
+      <TodoList 
+        listId={currentView} 
+        initialTodos={getInitialTodos()} 
+        enhanced={true}
+      />
+    );
   };
 
   return (
@@ -249,21 +253,21 @@ export function TodoPage({ serverUrl }: TodoPageProps) {
               <button 
                 style={{
                   ...styles.navLink,
-                  ...(currentView === 'my-tasks' ? styles.activeNavLink : {})
+                  ...(currentView === 'quick-notes' ? styles.activeNavLink : {})
                 }}
-                onClick={() => setCurrentView('my-tasks')}
+                onClick={() => setCurrentView('quick-notes')}
               >
-                <span style={styles.navIcon}>📋</span> My Tasks
+                <span style={styles.navIcon}>📝</span> Quick Notes
               </button>
               
               <button 
                 style={{
                   ...styles.navLink,
-                  ...(currentView === 'quick-notes' ? styles.activeNavLink : {})
+                  ...(currentView === 'my-tasks' ? styles.activeNavLink : {})
                 }}
-                onClick={() => setCurrentView('quick-notes')}
+                onClick={() => setCurrentView('my-tasks')}
               >
-                <span style={styles.navIcon}>✏️</span> Quick Notes
+                <span style={styles.navIcon}>✓</span> My Tasks
               </button>
               
               <button 
@@ -273,10 +277,9 @@ export function TodoPage({ serverUrl }: TodoPageProps) {
                 }}
                 onClick={() => setCurrentView('backlog')}
               >
-                <span style={styles.navIcon}>📊</span> Backlog
+                <span style={styles.navIcon}>📋</span> Backlog
               </button>
               
-              {/* Render custom pages */}
               {customPages.map(page => (
                 <button 
                   key={page}
@@ -295,7 +298,8 @@ export function TodoPage({ serverUrl }: TodoPageProps) {
               <button 
                 style={{
                   ...styles.toggleButton,
-                  ...(pageMode === 'simple' ? styles.activeToggle : {})
+                  ...(pageMode === 'simple' ? styles.activeToggle : {}),
+                  borderRadius: '4px 0 0 4px'
                 }}
                 onClick={() => setPageMode('simple')}
               >
@@ -304,7 +308,8 @@ export function TodoPage({ serverUrl }: TodoPageProps) {
               <button 
                 style={{
                   ...styles.toggleButton,
-                  ...(pageMode === 'enhanced' ? styles.activeToggle : {})
+                  ...(pageMode === 'enhanced' ? styles.activeToggle : {}),
+                  borderRadius: '0 4px 4px 0'
                 }}
                 onClick={() => setPageMode('enhanced')}
               >
@@ -316,9 +321,7 @@ export function TodoPage({ serverUrl }: TodoPageProps) {
         
         <div style={styles.contentArea}>
           <header style={styles.header}>
-            <h1 style={styles.heading}>
-              {getPageTitle(currentView)}
-            </h1>
+            <h1 style={styles.heading}>{getPageTitle(currentView)}</h1>
           </header>
           
           <main style={styles.main}>
@@ -326,7 +329,7 @@ export function TodoPage({ serverUrl }: TodoPageProps) {
           </main>
           
           <footer style={styles.footer}>
-            <p>Todo App © 2025</p>
+            Todo App - Built with Bit
           </footer>
         </div>
       </div>

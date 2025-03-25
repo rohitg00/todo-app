@@ -88,18 +88,6 @@
             }
         }
     },
-    "ui/enhanced-todo-list": {
-        "name": "ui/enhanced-todo-list",
-        "scope": "dras.todo-app",
-        "version": "0.0.6",
-        "mainFile": "index.ts",
-        "rootDir": "todo-app/ui/enhanced-todo-list",
-        "config": {
-            "teambit.component/deprecation": {
-                "deprecate": true
-            }
-        }
-    },
     "ui/rich-text-editor": {
         "name": "ui/rich-text-editor",
         "scope": "dras.todo-app",
