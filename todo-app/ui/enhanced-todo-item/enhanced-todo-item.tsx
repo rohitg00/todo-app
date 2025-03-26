@@ -10,7 +10,7 @@ export type TodoTag = {
   color: string;
 };
 
-export type TodoItemProps = {
+export type EnhancedTodoItemProps = {
   /**
    * Todo item ID
    */
@@ -40,10 +40,6 @@ export type TodoItemProps = {
    */
   tags?: TodoTag[];
   /**
-   * Available tags to choose from
-   */
-  availableTags?: TodoTag[];
-  /**
    * Toggle completion callback
    */
   onToggle?: (id: string) => void;
@@ -54,19 +50,19 @@ export type TodoItemProps = {
   /**
    * Update content callback
    */
-  onContentChange?: (content: string) => void;
+  onContentChange?: (id: string, content: string) => void;
   /**
    * Update due date callback
    */
-  onDueDateChange?: (date: Date | null) => void;
+  onDueDateChange?: (id: string, date: Date | null) => void;
   /**
    * Update priority callback
    */
-  onPriorityChange?: (priority: TodoPriority) => void;
+  onPriorityChange?: (id: string, priority: TodoPriority) => void;
   /**
    * Update tags callback
    */
-  onTagsChange?: (tags: TodoTag[]) => void;
+  onTagsChange?: (id: string, tags: TodoTag[]) => void;
 };
 
 const styles: Record<string, CSSProperties> = {
@@ -182,31 +178,10 @@ const styles: Record<string, CSSProperties> = {
     border: '1px solid #ddd',
     resize: 'vertical' as 'vertical',
     fontFamily: 'inherit'
-  },
-  tagSelector: {
-    marginTop: '10px'
-  },
-  availableTags: {
-    display: 'flex',
-    flexWrap: 'wrap' as 'wrap',
-    gap: '8px',
-    marginTop: '8px'
-  },
-  tagButton: {
-    padding: '4px 10px',
-    borderRadius: '15px',
-    fontSize: '12px',
-    border: '1px solid',
-    cursor: 'pointer',
-    display: 'flex',
-    alignItems: 'center'
-  },
-  tagSelected: {
-    fontWeight: 'bold' as 'bold'
   }
 };
 
-export function TodoItem({
+export function EnhancedTodoItem({
   id,
   text,
   completed = false,
@@ -214,14 +189,13 @@ export function TodoItem({
   dueDate,
   priority = 'medium',
   tags = [],
-  availableTags = [],
   onToggle,
   onDelete,
   onContentChange,
   onDueDateChange,
   onPriorityChange,
   onTagsChange
-}: TodoItemProps) {
+}: EnhancedTodoItemProps) {
   const [expanded, setExpanded] = useState(false);
   const [noteContent, setNoteContent] = useState(content);
   
@@ -229,38 +203,26 @@ export function TodoItem({
     const newContent = e.target.value;
     setNoteContent(newContent);
     if (onContentChange) {
-      onContentChange(newContent);
+      onContentChange(id, newContent);
     }
   };
   
   const handleDueDateChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     if (onDueDateChange) {
       const dateValue = event.target.value;
-      onDueDateChange(dateValue ? new Date(dateValue) : null);
+      onDueDateChange(id, dateValue ? new Date(dateValue) : null);
     }
   };
   
   const handlePriorityChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     if (onPriorityChange) {
-      onPriorityChange(event.target.value as TodoPriority);
+      onPriorityChange(id, event.target.value as TodoPriority);
     }
   };
   
-  const handleTagsChange = (tagId: string) => {
+  const handleTagsChange = (newTags: TodoTag[]) => {
     if (onTagsChange) {
-      // Check if tag is already selected
-      const isSelected = tags.some(selectedTag => selectedTag.id === tagId);
-      
-      if (isSelected) {
-        // Remove tag
-        onTagsChange(tags.filter(selectedTag => selectedTag.id !== tagId));
-      } else {
-        // Add tag
-        const tagToAdd = availableTags.find(availableTag => availableTag.id === tagId);
-        if (tagToAdd) {
-          onTagsChange([...tags, tagToAdd]);
-        }
-      }
+      onTagsChange(id, newTags);
     }
   };
   
@@ -285,6 +247,7 @@ export function TodoItem({
             onChange={() => onToggle && onToggle(id)}
             style={styles.checkbox}
           />
+          
           <span 
             style={{
               ...styles.todoText,
@@ -294,13 +257,15 @@ export function TodoItem({
           >
             {text}
           </span>
+          
           <div style={styles.actions}>
             <button 
               style={styles.expandButton}
               onClick={() => setExpanded(!expanded)}
             >
-              {expanded ? 'Hide Details' : 'Show Details'}
+              {expanded ? '▲' : '▼'}
             </button>
+            
             <button 
               style={styles.deleteButton}
               onClick={() => onDelete && onDelete(id)}
@@ -310,47 +275,45 @@ export function TodoItem({
           </div>
         </div>
         
-        {(priority !== 'medium' || dueDate || tags.length > 0) && (
-          <div style={styles.metaInfo}>
-            {priority !== 'medium' && (
-              <div style={{
+        <div style={styles.metaInfo}>
+          {priority && (
+            <div 
+              style={{
                 ...styles.priorityBadge,
                 backgroundColor: priorityColors[priority]
-              }}>
-                {priority.charAt(0).toUpperCase() + priority.slice(1)}
-              </div>
-            )}
-            
-            {dueDate && (
-              <div style={styles.dueDate}>
-                Due: {formatDate(dueDate)}
-              </div>
-            )}
-            
-            {tags.length > 0 && (
-              <div style={styles.tags}>
-                {tags.map(tag => (
-                  <span 
-                    key={tag.id}
-                    style={{
-                      ...styles.tag,
-                      backgroundColor: tag.color
-                    }}
-                  >
-                    {tag.name}
-                  </span>
-                ))}
-              </div>
-            )}
+              }}
+            >
+              {priority}
+            </div>
+          )}
+          
+          {dueDate && (
+            <div style={styles.dueDate}>
+              {dueDate.toLocaleDateString()}
+            </div>
+          )}
+          
+          <div style={styles.tags}>
+            {tags.map(tag => (
+              <span 
+                key={tag.id}
+                style={{
+                  ...styles.tag,
+                  backgroundColor: tag.color
+                }}
+              >
+                {tag.name}
+              </span>
+            ))}
           </div>
-        )}
+        </div>
       </div>
       
       {expanded && (
         <div style={styles.expandedContent}>
           <div style={styles.controls}>
             <div style={styles.controlGroup}>
-              <label htmlFor={`priority-${id}`} style={styles.label}>Priority</label>
+              <label style={styles.label} htmlFor={`priority-${id}`}>Priority</label>
               <select 
                 id={`priority-${id}`}
                 value={priority}
@@ -365,50 +328,26 @@ export function TodoItem({
             </div>
             
             <div style={styles.controlGroup}>
-              <label htmlFor={`due-date-${id}`} style={styles.label}>Due Date</label>
-              <input
-                id={`due-date-${id}`}
+              <label style={styles.label} htmlFor={`duedate-${id}`}>Due Date</label>
+              <input 
+                id={`duedate-${id}`}
                 type="date"
-                value={dueDate ? new Date(dueDate).toISOString().split('T')[0] : ''}
+                value={dueDate ? formatDate(dueDate) : ''}
                 onChange={handleDueDateChange}
                 style={styles.dateInput}
               />
             </div>
           </div>
           
-          {availableTags.length > 0 && (
-            <div style={styles.tagSelector}>
-              <label style={styles.label}>Tags</label>
-              <div style={styles.availableTags}>
-                {availableTags.map(availableTag => (
-                  <button
-                    key={availableTag.id}
-                    type="button"
-                    onClick={() => handleTagsChange(availableTag.id)}
-                    style={{
-                      ...styles.tagButton,
-                      ...(tags.some(t => t.id === availableTag.id) ? styles.tagSelected : {}),
-                      borderColor: availableTag.color,
-                      color: tags.some(t => t.id === availableTag.id) ? 'white' : availableTag.color,
-                      backgroundColor: tags.some(t => t.id === availableTag.id) ? availableTag.color : 'transparent'
-                    }}
-                  >
-                    {availableTag.name}
-                  </button>
-                ))}
-              </div>
-            </div>
-          )}
-          
           <div style={styles.notes}>
-            <label htmlFor={`notes-${id}`} style={styles.label}>Notes</label>
+            <label style={styles.label} htmlFor={`notes-${id}`}>Notes</label>
             <textarea
               id={`notes-${id}`}
               value={noteContent}
               onChange={handleContentChange}
               style={styles.textarea}
-              rows={4}
-              placeholder="Add notes here..."
+              placeholder="Add notes..."
+              rows={6}
             />
           </div>
         </div>

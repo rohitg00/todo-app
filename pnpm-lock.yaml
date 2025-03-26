@@ -29,9 +29,6 @@ importers:
       '@bitdev/react.preview.react-docs-app':
         specifier: ^0.0.5
         version: 0.0.5(@mdx-js/react@1.6.22(react@19.0.0))(@testing-library/react@16.2.0(@testing-library/dom@10.4.0)(@types/react-dom@19.0.2(@types/react@19.0.2))(@types/react@19.0.2)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(@types/react-dom@19.0.2(@types/react@19.0.2))(@types/react@19.0.2)(graphql@16.10.0)(typescript@5.8.2)
-      '@dras/todo-app.ui.enhanced-todo-item':
-        specifier: 0.0.5
-        version: 0.0.5(@testing-library/react@16.2.0(@testing-library/dom@10.4.0)(@types/react-dom@19.0.2(@types/react@19.0.2))(@types/react@19.0.2)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(react@19.0.0)
       '@mdx-js/mdx':
         specifier: 1.6.22
         version: 1.6.22
@@ -189,9 +186,12 @@ importers:
       '@dras/todo-app.todo-app':
         specifier: workspace:*
         version: file:todo-app/todo-app(jest@29.3.1(@types/node@20.12.10))(less@4.2.2)(lightningcss@1.29.3)(react-dom@19.0.0(react@19.0.0))(react-router-dom@6.30.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(terser@5.39.0)(typescript@5.8.2)(vite@5.4.14(@types/node@20.12.10)(less@4.2.2)(lightningcss@1.29.3)(sass@1.86.0)(terser@5.39.0))
-      '@dras/todo-app.ui.enhanced-todo-list':
+      '@dras/todo-app.todo-item':
         specifier: workspace:*
-        version: file:todo-app/ui/enhanced-todo-list(@testing-library/react@16.2.0(@testing-library/dom@10.4.0)(@types/react-dom@19.0.2(@types/react@19.0.2))(@types/react@19.0.2)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(jest@29.3.1(@types/node@20.12.10))(less@4.2.2)(lightningcss@1.29.3)(react@19.0.0)(terser@5.39.0)(typescript@5.8.2)
+        version: file:todo-app/todo-item(@testing-library/react@16.2.0(@testing-library/dom@10.4.0)(@types/react-dom@19.0.2(@types/react@19.0.2))(@types/react@19.0.2)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(jest@29.3.1(@types/node@20.12.10))(less@4.2.2)(lightningcss@1.29.3)(react@19.0.0)(terser@5.39.0)(typescript@5.8.2)
+      '@dras/todo-app.ui.enhanced-todo-item':
+        specifier: workspace:*
+        version: file:todo-app/ui/enhanced-todo-item(@testing-library/react@16.2.0(@testing-library/dom@10.4.0)(@types/react-dom@19.0.2(@types/react@19.0.2))(@types/react@19.0.2)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(jest@29.3.1(@types/node@20.12.10))(less@4.2.2)(lightningcss@1.29.3)(react@19.0.0)(terser@5.39.0)(typescript@5.8.2)
       '@dras/todo-app.ui.rich-text-editor':
         specifier: workspace:*
         version: file:todo-app/ui/rich-text-editor(@testing-library/react@16.2.0(@testing-library/dom@10.4.0)(@types/react-dom@19.0.2(@types/react@19.0.2))(@types/react@19.0.2)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(immutable@5.0.3)(jest@29.3.1(@types/node@20.12.10))(less@4.2.2)(lightningcss@1.29.3)(react@19.0.0)(terser@5.39.0)(typescript@5.8.2)
@@ -289,7 +289,9 @@ importers:
         injected: true
       '@dras/todo-app.todo-app':
         injected: true
-      '@dras/todo-app.ui.enhanced-todo-list':
+      '@dras/todo-app.todo-item':
+        injected: true
+      '@dras/todo-app.ui.enhanced-todo-item':
         injected: true
       '@dras/todo-app.ui.rich-text-editor':
         injected: true
@@ -332,9 +334,12 @@ importers:
       '@dras/todo-app.todo-app':
         specifier: workspace:*
         version: file:todo-app/todo-app(jest@29.3.1(@types/node@20.12.10))(less@4.2.2)(lightningcss@1.29.3)(react-dom@19.0.0(react@19.0.0))(react-router-dom@6.30.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(terser@5.39.0)(typescript@5.8.2)(vite@5.4.14(@types/node@20.12.10)(less@4.2.2)(lightningcss@1.29.3)(sass@1.86.0)(terser@5.39.0))
-      '@dras/todo-app.ui.enhanced-todo-list':
+      '@dras/todo-app.todo-item':
         specifier: workspace:*
-        version: file:todo-app/ui/enhanced-todo-list(@testing-library/react@16.2.0(@testing-library/dom@10.4.0)(@types/react-dom@19.0.2(@types/react@19.0.2))(@types/react@19.0.2)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(jest@29.3.1(@types/node@20.12.10))(less@4.2.2)(lightningcss@1.29.3)(react@19.0.0)(terser@5.39.0)(typescript@5.8.2)
+        version: file:todo-app/todo-item(@testing-library/react@16.2.0(@testing-library/dom@10.4.0)(@types/react-dom@19.0.2(@types/react@19.0.2))(@types/react@19.0.2)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(jest@29.3.1(@types/node@20.12.10))(less@4.2.2)(lightningcss@1.29.3)(react@19.0.0)(terser@5.39.0)(typescript@5.8.2)
+      '@dras/todo-app.ui.enhanced-todo-item':
+        specifier: workspace:*
+        version: file:todo-app/ui/enhanced-todo-item(@testing-library/react@16.2.0(@testing-library/dom@10.4.0)(@types/react-dom@19.0.2(@types/react@19.0.2))(@types/react@19.0.2)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(jest@29.3.1(@types/node@20.12.10))(less@4.2.2)(lightningcss@1.29.3)(react@19.0.0)(terser@5.39.0)(typescript@5.8.2)
       '@dras/todo-app.ui.rich-text-editor':
         specifier: workspace:*
         version: file:todo-app/ui/rich-text-editor(@testing-library/react@16.2.0(@testing-library/dom@10.4.0)(@types/react-dom@19.0.2(@types/react@19.0.2))(@types/react@19.0.2)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(immutable@5.0.3)(jest@29.3.1(@types/node@20.12.10))(less@4.2.2)(lightningcss@1.29.3)(react@19.0.0)(terser@5.39.0)(typescript@5.8.2)
@@ -462,7 +467,9 @@ importers:
         injected: true
       '@dras/todo-app.todo-app':
         injected: true
-      '@dras/todo-app.ui.enhanced-todo-list':
+      '@dras/todo-app.todo-item':
+        injected: true
+      '@dras/todo-app.ui.enhanced-todo-item':
         injected: true
       '@dras/todo-app.ui.rich-text-editor':
         injected: true
@@ -508,9 +515,12 @@ importers:
       '@dras/todo-app.todo-app':
         specifier: workspace:*
         version: file:todo-app/todo-app(jest@29.3.1(@types/node@20.12.10))(less@4.2.2)(lightningcss@1.29.3)(react-dom@19.0.0(react@19.0.0))(react-router-dom@6.30.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(terser@5.39.0)(typescript@5.8.2)(vite@5.4.14(@types/node@20.12.10)(less@4.2.2)(lightningcss@1.29.3)(sass@1.86.0)(terser@5.39.0))
-      '@dras/todo-app.ui.enhanced-todo-list':
+      '@dras/todo-app.todo-item':
         specifier: workspace:*
-        version: file:todo-app/ui/enhanced-todo-list(@testing-library/react@16.2.0(@testing-library/dom@10.4.0)(@types/react-dom@19.0.2(@types/react@19.0.2))(@types/react@19.0.2)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(jest@29.3.1(@types/node@20.12.10))(less@4.2.2)(lightningcss@1.29.3)(react@19.0.0)(terser@5.39.0)(typescript@5.8.2)
+        version: file:todo-app/todo-item(@testing-library/react@16.2.0(@testing-library/dom@10.4.0)(@types/react-dom@19.0.2(@types/react@19.0.2))(@types/react@19.0.2)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(jest@29.3.1(@types/node@20.12.10))(less@4.2.2)(lightningcss@1.29.3)(react@19.0.0)(terser@5.39.0)(typescript@5.8.2)
+      '@dras/todo-app.ui.enhanced-todo-item':
+        specifier: workspace:*
+        version: file:todo-app/ui/enhanced-todo-item(@testing-library/react@16.2.0(@testing-library/dom@10.4.0)(@types/react-dom@19.0.2(@types/react@19.0.2))(@types/react@19.0.2)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(jest@29.3.1(@types/node@20.12.10))(less@4.2.2)(lightningcss@1.29.3)(react@19.0.0)(terser@5.39.0)(typescript@5.8.2)
       '@dras/todo-app.ui.rich-text-editor':
         specifier: workspace:*
         version: file:todo-app/ui/rich-text-editor(@testing-library/react@16.2.0(@testing-library/dom@10.4.0)(@types/react-dom@19.0.2(@types/react@19.0.2))(@types/react@19.0.2)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(immutable@5.0.3)(jest@29.3.1(@types/node@20.12.10))(less@4.2.2)(lightningcss@1.29.3)(react@19.0.0)(terser@5.39.0)(typescript@5.8.2)
@@ -618,7 +628,9 @@ importers:
         injected: true
       '@dras/todo-app.todo-app':
         injected: true
-      '@dras/todo-app.ui.enhanced-todo-list':
+      '@dras/todo-app.todo-item':
+        injected: true
+      '@dras/todo-app.ui.enhanced-todo-item':
         injected: true
       '@dras/todo-app.ui.rich-text-editor':
         injected: true
@@ -661,9 +673,12 @@ importers:
       '@dras/todo-app.todo-app':
         specifier: workspace:*
         version: file:todo-app/todo-app(jest@29.3.1(@types/node@20.12.10))(less@4.2.2)(lightningcss@1.29.3)(react-dom@19.0.0(react@19.0.0))(react-router-dom@6.30.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(terser@5.39.0)(typescript@5.8.2)(vite@5.4.14(@types/node@20.12.10)(less@4.2.2)(lightningcss@1.29.3)(sass@1.86.0)(terser@5.39.0))
-      '@dras/todo-app.ui.enhanced-todo-list':
+      '@dras/todo-app.todo-item':
         specifier: workspace:*
-        version: file:todo-app/ui/enhanced-todo-list(@testing-library/react@16.2.0(@testing-library/dom@10.4.0)(@types/react-dom@19.0.2(@types/react@19.0.2))(@types/react@19.0.2)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(jest@29.3.1(@types/node@20.12.10))(less@4.2.2)(lightningcss@1.29.3)(react@19.0.0)(terser@5.39.0)(typescript@5.8.2)
+        version: file:todo-app/todo-item(@testing-library/react@16.2.0(@testing-library/dom@10.4.0)(@types/react-dom@19.0.2(@types/react@19.0.2))(@types/react@19.0.2)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(jest@29.3.1(@types/node@20.12.10))(less@4.2.2)(lightningcss@1.29.3)(react@19.0.0)(terser@5.39.0)(typescript@5.8.2)
+      '@dras/todo-app.ui.enhanced-todo-item':
+        specifier: workspace:*
+        version: file:todo-app/ui/enhanced-todo-item(@testing-library/react@16.2.0(@testing-library/dom@10.4.0)(@types/react-dom@19.0.2(@types/react@19.0.2))(@types/react@19.0.2)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(jest@29.3.1(@types/node@20.12.10))(less@4.2.2)(lightningcss@1.29.3)(react@19.0.0)(terser@5.39.0)(typescript@5.8.2)
       '@dras/todo-app.ui.rich-text-editor':
         specifier: workspace:*
         version: file:todo-app/ui/rich-text-editor(@testing-library/react@16.2.0(@testing-library/dom@10.4.0)(@types/react-dom@19.0.2(@types/react@19.0.2))(@types/react@19.0.2)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(immutable@5.0.3)(jest@29.3.1(@types/node@20.12.10))(less@4.2.2)(lightningcss@1.29.3)(react@19.0.0)(terser@5.39.0)(typescript@5.8.2)
@@ -798,7 +813,9 @@ importers:
         injected: true
       '@dras/todo-app.todo-app':
         injected: true
-      '@dras/todo-app.ui.enhanced-todo-list':
+      '@dras/todo-app.todo-item':
+        injected: true
+      '@dras/todo-app.ui.enhanced-todo-item':
         injected: true
       '@dras/todo-app.ui.rich-text-editor':
         injected: true
@@ -1472,7 +1489,7 @@ importers:
         specifier: 4.0.15
         version: 4.0.15(@babel/traverse@7.26.10)(jest@29.3.1(@types/node@20.12.10))(less@4.2.2)(lightningcss@1.29.3)(terser@5.39.0)(type-fest@0.21.3)
 
-  todo-app/ui/enhanced-todo-list:
+  todo-app/todo-item:
     dependencies:
       '@apollo/client':
         specifier: ^3.8.8
@@ -1483,9 +1500,6 @@ importers:
       '@bitdev/react.preview.react-docs-app':
         specifier: ^0.0.5
         version: 0.0.5(@mdx-js/react@1.6.22(react@19.0.0))(@testing-library/react@16.2.0(@testing-library/dom@10.4.0)(@types/react-dom@19.0.2(@types/react@19.0.2))(@types/react@19.0.2)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(@types/react-dom@19.0.2(@types/react@19.0.2))(@types/react@19.0.2)(graphql@16.10.0)(typescript@5.8.2)
-      '@dras/todo-app.ui.enhanced-todo-item':
-        specifier: 0.0.5
-        version: 0.0.5(@testing-library/react@16.2.0(@testing-library/dom@10.4.0)(@types/react-dom@19.0.2(@types/react@19.0.2))(@types/react@19.0.2)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(react@19.0.0)
       '@mdx-js/mdx':
         specifier: 1.6.22
         version: 1.6.22
@@ -1579,9 +1593,6 @@ importers:
       sass:
         specifier: ^1.69.5
         version: 1.86.0
-      uuid:
-        specifier: ^11.1.0
-        version: 11.1.0
       vite:
         specifier: ^5.3.5
         version: 5.4.14(@types/node@20.12.10)(less@4.2.2)(lightningcss@1.29.3)(sass@1.86.0)(terser@5.39.0)
@@ -1595,9 +1606,124 @@ importers:
       '@bitdev/react.react-env':
         specifier: 4.0.15
         version: 4.0.15(@babel/traverse@7.26.10)(jest@29.3.1(@types/node@20.12.10))(less@4.2.2)(lightningcss@1.29.3)(terser@5.39.0)(type-fest@0.21.3)
-      '@types/uuid':
-        specifier: ^10.0.0
-        version: 10.0.0
+
+  todo-app/ui/enhanced-todo-item:
+    dependencies:
+      '@apollo/client':
+        specifier: ^3.8.8
+        version: 3.13.4(@types/react@19.0.2)(graphql@16.10.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      '@babel/core':
+        specifier: 7.26.9
+        version: 7.26.9
+      '@bitdev/react.preview.react-docs-app':
+        specifier: ^0.0.5
+        version: 0.0.5(@mdx-js/react@1.6.22(react@19.0.0))(@testing-library/react@16.2.0(@testing-library/dom@10.4.0)(@types/react-dom@19.0.2(@types/react@19.0.2))(@types/react@19.0.2)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(@types/react-dom@19.0.2(@types/react@19.0.2))(@types/react@19.0.2)(graphql@16.10.0)(typescript@5.8.2)
+      '@mdx-js/mdx':
+        specifier: 1.6.22
+        version: 1.6.22
+      '@mdx-js/react':
+        specifier: 1.6.22
+        version: 1.6.22(react@19.0.0)
+      '@teambit/mdx.ui.mdx-scope-context':
+        specifier: 1.0.7
+        version: 1.0.7(@types/react@19.0.2)(react@19.0.0)
+      '@testing-library/dom':
+        specifier: 10.4.0
+        version: 10.4.0
+      '@testing-library/jest-dom':
+        specifier: 6.4.8
+        version: 6.4.8
+      '@testing-library/react':
+        specifier: ^16.0.0
+        version: 16.2.0(@testing-library/dom@10.4.0)(@types/react-dom@19.0.2(@types/react@19.0.2))(@types/react@19.0.2)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      '@types/eslint':
+        specifier: 8.56.0
+        version: 8.56.0
+      '@types/find-root':
+        specifier: ^1.1.4
+        version: 1.1.4
+      '@types/jest':
+        specifier: ^29.2.2
+        version: 29.5.14
+      '@types/node':
+        specifier: 20.12.10
+        version: 20.12.10
+      '@types/react':
+        specifier: 19.0.2
+        version: 19.0.2
+      '@types/react-dom':
+        specifier: 19.0.2
+        version: 19.0.2(@types/react@19.0.2)
+      '@typescript-eslint/eslint-plugin':
+        specifier: 6.19.1
+        version: 6.19.1(@typescript-eslint/parser@6.19.1(eslint@8.56.0)(typescript@5.8.2))(eslint@8.56.0)(typescript@5.8.2)
+      '@typescript-eslint/parser':
+        specifier: 6.19.1
+        version: 6.19.1(eslint@8.56.0)(typescript@5.8.2)
+      '@vitest/coverage-v8':
+        specifier: ^2.0.4
+        version: 2.1.9(vitest@2.1.9(@types/node@20.12.10)(jsdom@24.1.3)(less@4.2.2)(lightningcss@1.29.3)(sass@1.86.0)(terser@5.39.0))
+      browserslist:
+        specifier: 4.23.0
+        version: 4.23.0
+      eslint:
+        specifier: 8.56.0
+        version: 8.56.0
+      eslint-plugin-import:
+        specifier: 2.29.1
+        version: 2.29.1(@typescript-eslint/parser@6.19.1(eslint@8.56.0)(typescript@5.8.2))(eslint@8.56.0)
+      eslint-plugin-jest:
+        specifier: 27.6.3
+        version: 27.6.3(@typescript-eslint/eslint-plugin@6.19.1(@typescript-eslint/parser@6.19.1(eslint@8.56.0)(typescript@5.8.2))(eslint@8.56.0)(typescript@5.8.2))(eslint@8.56.0)(jest@29.3.1(@types/node@20.12.10))(typescript@5.8.2)
+      eslint-plugin-jsx-a11y:
+        specifier: 6.8.0
+        version: 6.8.0(eslint@8.56.0)
+      eslint-plugin-mdx:
+        specifier: ^1.17.1
+        version: 1.17.1(eslint@8.56.0)
+      eslint-plugin-react:
+        specifier: 7.33.2
+        version: 7.33.2(eslint@8.56.0)
+      eslint-plugin-react-hooks:
+        specifier: 4.6.2
+        version: 4.6.2(eslint@8.56.0)
+      graphql:
+        specifier: ^16.8.1
+        version: 16.10.0
+      jsdom:
+        specifier: ^24.0.0
+        version: 24.1.3
+      pino-pretty:
+        specifier: 4.5.0
+        version: 4.5.0
+      react:
+        specifier: 19.0.0
+        version: 19.0.0
+      react-dom:
+        specifier: 19.0.0
+        version: 19.0.0(react@19.0.0)
+      react-router-dom:
+        specifier: ^6.26.0
+        version: 6.30.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      rollup:
+        specifier: 4.22.0
+        version: 4.22.0
+      sass:
+        specifier: ^1.69.5
+        version: 1.86.0
+      vite:
+        specifier: ^5.3.5
+        version: 5.4.14(@types/node@20.12.10)(less@4.2.2)(lightningcss@1.29.3)(sass@1.86.0)(terser@5.39.0)
+      vitest:
+        specifier: ^2.0.4
+        version: 2.1.9(@types/node@20.12.10)(jsdom@24.1.3)(less@4.2.2)(lightningcss@1.29.3)(sass@1.86.0)(terser@5.39.0)
+      webpack:
+        specifier: ^5.88.2
+        version: 5.98.0(esbuild@0.14.29)
+    devDependencies:
+      '@bitdev/react.react-env':
+        specifier: 4.0.15
+        version: 4.0.15(@babel/traverse@7.26.10)(jest@29.3.1(@types/node@20.12.10))(less@4.2.2)(lightningcss@1.29.3)(terser@5.39.0)(type-fest@0.21.3)
 
   todo-app/ui/rich-text-editor:
     dependencies:
@@ -2063,9 +2189,6 @@ importers:
       sass:
         specifier: ^1.69.5
         version: 1.86.0
-      uuid:
-        specifier: ^11.1.0
-        version: 11.1.0
       vite:
         specifier: ^5.3.5
         version: 5.4.14(@types/node@20.12.10)(less@4.2.2)(lightningcss@1.29.3)(sass@1.86.0)(terser@5.39.0)
@@ -2079,9 +2202,6 @@ importers:
       '@bitdev/react.react-env':
         specifier: 4.0.15
         version: 4.0.15(@babel/traverse@7.26.10)(jest@29.3.1(@types/node@20.12.10))(less@4.2.2)(lightningcss@1.29.3)(terser@5.39.0)(type-fest@0.21.3)
-      '@types/uuid':
-        specifier: ^10.0.0
-        version: 10.0.0
 
 packages:
 
@@ -3152,14 +3272,14 @@ packages:
       react-router-dom: ^6.26.0
       vite: ^5.3.5
 
-  '@dras/todo-app.ui.enhanced-todo-item@0.0.5':
-    resolution: {integrity: sha512-JyOzxpKApdmua1xIGgJJGwAfw3LPrl50QapH+iQ9LvtuKv7hM9jgmuaHr7hHYyC33QExKjSjIwYsLPG11kZG9A==}
+  '@dras/todo-app.todo-item@file:todo-app/todo-item':
+    resolution: {directory: todo-app/todo-item, type: directory}
     peerDependencies:
       '@testing-library/react': ^16.0.0
       react: ^17.0.0 || ^18.0.0 || ^19.0.0
 
-  '@dras/todo-app.ui.enhanced-todo-list@file:todo-app/ui/enhanced-todo-list':
-    resolution: {directory: todo-app/ui/enhanced-todo-list, type: directory}
+  '@dras/todo-app.ui.enhanced-todo-item@file:todo-app/ui/enhanced-todo-item':
+    resolution: {directory: todo-app/ui/enhanced-todo-item, type: directory}
     peerDependencies:
       '@testing-library/react': ^16.0.0
       react: ^17.0.0 || ^18.0.0 || ^19.0.0
@@ -12507,7 +12627,6 @@ snapshots:
       '@apollo/client': 3.13.4(@types/react@19.0.2)(graphql@16.10.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       '@babel/core': 7.26.9
       '@bitdev/react.preview.react-docs-app': 0.0.5(@mdx-js/react@1.6.22(react@19.0.0))(@testing-library/react@16.2.0(@testing-library/dom@10.4.0)(@types/react-dom@19.0.2(@types/react@19.0.2))(@types/react@19.0.2)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(@types/react-dom@19.0.2(@types/react@19.0.2))(@types/react@19.0.2)(graphql@16.10.0)(typescript@5.8.2)
-      '@dras/todo-app.entities.todo-item': file:todo-app/entities/todo-item(@testing-library/react@16.2.0(@testing-library/dom@10.4.0)(@types/react-dom@19.0.2(@types/react@19.0.2))(@types/react@19.0.2)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(@types/react-dom@19.0.2(@types/react@19.0.2))(@types/react@19.0.2)(jest@29.3.1(@types/node@20.12.10))(jsdom@24.1.3)(less@4.2.2)(lightningcss@1.29.3)(sass@1.86.0)(terser@5.39.0)(typescript@5.8.2)
       '@dras/todo-app.hooks.use-todo-list': file:todo-app/hooks/use-todo-list(@apollo/client@3.13.4(@types/react@19.0.2)(graphql@16.10.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(@testing-library/react@16.2.0(@testing-library/dom@10.4.0)(@types/react-dom@19.0.2(@types/react@19.0.2))(@types/react@19.0.2)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(jest@29.3.1(@types/node@20.12.10))(less@4.2.2)(lightningcss@1.29.3)(react@19.0.0)(terser@5.39.0)(typescript@5.8.2)(vitest@2.1.9(@types/node@20.12.10)(jsdom@24.1.3)(less@4.2.2)(lightningcss@1.29.3)(sass@1.86.0)(terser@5.39.0))
       '@dras/todo-app.ui.todo-list': file:todo-app/ui/todo-list(@testing-library/react@16.2.0(@testing-library/dom@10.4.0)(@types/react-dom@19.0.2(@types/react@19.0.2))(@types/react@19.0.2)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(jest@29.3.1(@types/node@20.12.10))(less@4.2.2)(lightningcss@1.29.3)(react@19.0.0)(terser@5.39.0)(typescript@5.8.2)(vitest@2.1.9(@types/node@20.12.10)(jsdom@24.1.3)(less@4.2.2)(lightningcss@1.29.3)(sass@1.86.0)(terser@5.39.0))
       '@mdx-js/mdx': 1.6.22
@@ -12888,17 +13007,11 @@ snapshots:
       - utf-8-validate
       - webpack-cli
 
-  '@dras/todo-app.ui.enhanced-todo-item@0.0.5(@testing-library/react@16.2.0(@testing-library/dom@10.4.0)(@types/react-dom@19.0.2(@types/react@19.0.2))(@types/react@19.0.2)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(react@19.0.0)':
-    dependencies:
-      '@testing-library/react': 16.2.0(@testing-library/dom@10.4.0)(@types/react-dom@19.0.2(@types/react@19.0.2))(@types/react@19.0.2)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-      react: 19.0.0
-
-  '@dras/todo-app.ui.enhanced-todo-list@file:todo-app/ui/enhanced-todo-list(@testing-library/react@16.2.0(@testing-library/dom@10.4.0)(@types/react-dom@19.0.2(@types/react@19.0.2))(@types/react@19.0.2)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(jest@29.3.1(@types/node@20.12.10))(less@4.2.2)(lightningcss@1.29.3)(react@19.0.0)(terser@5.39.0)(typescript@5.8.2)':
+  '@dras/todo-app.todo-item@file:todo-app/todo-item(@testing-library/react@16.2.0(@testing-library/dom@10.4.0)(@types/react-dom@19.0.2(@types/react@19.0.2))(@types/react@19.0.2)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(jest@29.3.1(@types/node@20.12.10))(less@4.2.2)(lightningcss@1.29.3)(react@19.0.0)(terser@5.39.0)(typescript@5.8.2)':
     dependencies:
       '@apollo/client': 3.13.4(@types/react@19.0.2)(graphql@16.10.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       '@babel/core': 7.26.9
       '@bitdev/react.preview.react-docs-app': 0.0.5(@mdx-js/react@1.6.22(react@19.0.0))(@testing-library/react@16.2.0(@testing-library/dom@10.4.0)(@types/react-dom@19.0.2(@types/react@19.0.2))(@types/react@19.0.2)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(@types/react-dom@19.0.2(@types/react@19.0.2))(@types/react@19.0.2)(graphql@16.10.0)(typescript@5.8.2)
-      '@dras/todo-app.ui.enhanced-todo-item': 0.0.5(@testing-library/react@16.2.0(@testing-library/dom@10.4.0)(@types/react-dom@19.0.2(@types/react@19.0.2))(@types/react@19.0.2)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(react@19.0.0)
       '@mdx-js/mdx': 1.6.22
       '@mdx-js/react': 1.6.22(react@19.0.0)
       '@teambit/mdx.ui.mdx-scope-context': 1.0.7(@types/react@19.0.2)(react@19.0.0)
@@ -12930,7 +13043,73 @@ snapshots:
       react-router-dom: 6.30.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       rollup: 4.22.0
       sass: 1.86.0
-      uuid: 11.1.0
+      vite: 5.4.14(@types/node@20.12.10)(less@4.2.2)(lightningcss@1.29.3)(sass@1.86.0)(terser@5.39.0)
+      vitest: 2.1.9(@types/node@20.12.10)(jsdom@24.1.3)(less@4.2.2)(lightningcss@1.29.3)(sass@1.86.0)(terser@5.39.0)
+      webpack: 5.98.0(esbuild@0.14.29)
+    transitivePeerDependencies:
+      - '@edge-runtime/vm'
+      - '@swc/core'
+      - '@vitest/browser'
+      - '@vitest/ui'
+      - bufferutil
+      - canvas
+      - encoding
+      - esbuild
+      - eslint-import-resolver-typescript
+      - eslint-import-resolver-webpack
+      - graphql-ws
+      - happy-dom
+      - jest
+      - less
+      - lightningcss
+      - msw
+      - sass-embedded
+      - stylus
+      - subscriptions-transport-ws
+      - sugarss
+      - supports-color
+      - terser
+      - typescript
+      - uglify-js
+      - utf-8-validate
+      - webpack-cli
+
+  '@dras/todo-app.ui.enhanced-todo-item@file:todo-app/ui/enhanced-todo-item(@testing-library/react@16.2.0(@testing-library/dom@10.4.0)(@types/react-dom@19.0.2(@types/react@19.0.2))(@types/react@19.0.2)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(jest@29.3.1(@types/node@20.12.10))(less@4.2.2)(lightningcss@1.29.3)(react@19.0.0)(terser@5.39.0)(typescript@5.8.2)':
+    dependencies:
+      '@apollo/client': 3.13.4(@types/react@19.0.2)(graphql@16.10.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      '@babel/core': 7.26.9
+      '@bitdev/react.preview.react-docs-app': 0.0.5(@mdx-js/react@1.6.22(react@19.0.0))(@testing-library/react@16.2.0(@testing-library/dom@10.4.0)(@types/react-dom@19.0.2(@types/react@19.0.2))(@types/react@19.0.2)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(@types/react-dom@19.0.2(@types/react@19.0.2))(@types/react@19.0.2)(graphql@16.10.0)(typescript@5.8.2)
+      '@mdx-js/mdx': 1.6.22
+      '@mdx-js/react': 1.6.22(react@19.0.0)
+      '@teambit/mdx.ui.mdx-scope-context': 1.0.7(@types/react@19.0.2)(react@19.0.0)
+      '@testing-library/dom': 10.4.0
+      '@testing-library/jest-dom': 6.4.8
+      '@testing-library/react': 16.2.0(@testing-library/dom@10.4.0)(@types/react-dom@19.0.2(@types/react@19.0.2))(@types/react@19.0.2)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      '@types/eslint': 8.56.0
+      '@types/find-root': 1.1.4
+      '@types/jest': 29.5.14
+      '@types/node': 20.12.10
+      '@types/react': 19.0.2
+      '@types/react-dom': 19.0.2(@types/react@19.0.2)
+      '@typescript-eslint/eslint-plugin': 6.19.1(@typescript-eslint/parser@6.19.1(eslint@8.56.0)(typescript@5.8.2))(eslint@8.56.0)(typescript@5.8.2)
+      '@typescript-eslint/parser': 6.19.1(eslint@8.56.0)(typescript@5.8.2)
+      '@vitest/coverage-v8': 2.1.9(vitest@2.1.9(@types/node@20.12.10)(jsdom@24.1.3)(less@4.2.2)(lightningcss@1.29.3)(sass@1.86.0)(terser@5.39.0))
+      browserslist: 4.23.0
+      eslint: 8.56.0
+      eslint-plugin-import: 2.29.1(@typescript-eslint/parser@6.19.1(eslint@8.56.0)(typescript@5.8.2))(eslint@8.56.0)
+      eslint-plugin-jest: 27.6.3(@typescript-eslint/eslint-plugin@6.19.1(@typescript-eslint/parser@6.19.1(eslint@8.56.0)(typescript@5.8.2))(eslint@8.56.0)(typescript@5.8.2))(eslint@8.56.0)(jest@29.3.1(@types/node@20.12.10))(typescript@5.8.2)
+      eslint-plugin-jsx-a11y: 6.8.0(eslint@8.56.0)
+      eslint-plugin-mdx: 1.17.1(eslint@8.56.0)
+      eslint-plugin-react: 7.33.2(eslint@8.56.0)
+      eslint-plugin-react-hooks: 4.6.2(eslint@8.56.0)
+      graphql: 16.10.0
+      jsdom: 24.1.3
+      pino-pretty: 4.5.0
+      react: 19.0.0
+      react-dom: 19.0.0(react@19.0.0)
+      react-router-dom: 6.30.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      rollup: 4.22.0
+      sass: 1.86.0
       vite: 5.4.14(@types/node@20.12.10)(less@4.2.2)(lightningcss@1.29.3)(sass@1.86.0)(terser@5.39.0)
       vitest: 2.1.9(@types/node@20.12.10)(jsdom@24.1.3)(less@4.2.2)(lightningcss@1.29.3)(sass@1.86.0)(terser@5.39.0)
       webpack: 5.98.0(esbuild@0.14.29)
@@ -13173,7 +13352,6 @@ snapshots:
       '@bitdev/react.preview.react-docs-app': 0.0.5(@mdx-js/react@1.6.22(react@19.0.0))(@testing-library/react@16.2.0(@testing-library/dom@10.4.0)(@types/react-dom@19.0.2(@types/react@19.0.2))(@types/react@19.0.2)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(@types/react-dom@19.0.2(@types/react@19.0.2))(@types/react@19.0.2)(graphql@16.10.0)(typescript@5.8.2)
       '@dras/todo-app.entities.todo-item': file:todo-app/entities/todo-item(@testing-library/react@16.2.0(@testing-library/dom@10.4.0)(@types/react-dom@19.0.2(@types/react@19.0.2))(@types/react@19.0.2)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(@types/react-dom@19.0.2(@types/react@19.0.2))(@types/react@19.0.2)(jest@29.3.1(@types/node@20.12.10))(jsdom@24.1.3)(less@4.2.2)(lightningcss@1.29.3)(sass@1.86.0)(terser@5.39.0)(typescript@5.8.2)
       '@dras/todo-app.hooks.use-todo-list': file:todo-app/hooks/use-todo-list(@apollo/client@3.13.4(@types/react@19.0.2)(graphql@16.10.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(@testing-library/react@16.2.0(@testing-library/dom@10.4.0)(@types/react-dom@19.0.2(@types/react@19.0.2))(@types/react@19.0.2)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(jest@29.3.1(@types/node@20.12.10))(less@4.2.2)(lightningcss@1.29.3)(react@19.0.0)(terser@5.39.0)(typescript@5.8.2)(vitest@2.1.9(@types/node@20.12.10)(jsdom@24.1.3)(less@4.2.2)(lightningcss@1.29.3)(sass@1.86.0)(terser@5.39.0))
-      '@dras/todo-app.ui.todo-item': file:todo-app/ui/todo-item(@testing-library/react@16.2.0(@testing-library/dom@10.4.0)(@types/react-dom@19.0.2(@types/react@19.0.2))(@types/react@19.0.2)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(jest@29.3.1(@types/node@20.12.10))(less@4.2.2)(lightningcss@1.29.3)(react@19.0.0)(terser@5.39.0)(typescript@5.8.2)
       '@mdx-js/mdx': 1.6.22
       '@mdx-js/react': 1.6.22(react@19.0.0)
       '@teambit/mdx.ui.mdx-scope-context': 1.0.7(@types/react@19.0.2)(react@19.0.0)
@@ -13205,7 +13383,6 @@ snapshots:
       react-router-dom: 6.30.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       rollup: 4.22.0
       sass: 1.86.0
-      uuid: 11.1.0
       vite: 5.4.14(@types/node@20.12.10)(less@4.2.2)(lightningcss@1.29.3)(sass@1.86.0)(terser@5.39.0)
       vitest: 2.1.9(@types/node@20.12.10)(jsdom@24.1.3)(less@4.2.2)(lightningcss@1.29.3)(sass@1.86.0)(terser@5.39.0)
       webpack: 5.98.0(esbuild@0.14.29)

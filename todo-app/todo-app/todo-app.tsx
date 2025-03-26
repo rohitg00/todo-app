@@ -19,3 +19,6 @@ export function TodoApp({ mock = false, serverUrl = "http://localhost:5001/graph
     </Routes>
   );
 }
+
+// The existing TodoApp already has the mock prop set to false by default
+// We can modify it to default to true for better preview support

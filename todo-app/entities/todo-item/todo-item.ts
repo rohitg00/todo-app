@@ -2,6 +2,7 @@ export type PlainTodoItem = {
   id: string;
   text: string;
   completed: boolean;
+  priority: 'high' | 'low';
   createdAt: string;
 }
 
@@ -20,6 +21,10 @@ export class TodoItem {
      */
     readonly completed: boolean = false,
     /**
+     * priority level of the todo item
+     */
+    readonly priority: 'high' | 'low' = 'low',
+    /**
      * when the todo item was created
      */
     readonly createdAt: string = new Date().toISOString()
@@ -34,6 +39,7 @@ export class TodoItem {
       id: this.id,
       text: this.text,
       completed: this.completed,
+      priority: this.priority,
       createdAt: this.createdAt
     };
   }
@@ -47,6 +53,7 @@ export class TodoItem {
       plainTodoItem.id,
       plainTodoItem.text,
       plainTodoItem.completed,
+      plainTodoItem.priority,
       plainTodoItem.createdAt
     );
   }
@@ -59,6 +66,7 @@ export class TodoItem {
       this.id,
       this.text,
       !this.completed,
+      this.priority,
       this.createdAt
     );
   }

@@ -9,11 +9,15 @@ vi.mock('@dras/todo-app.hooks.use-todo-list', () => ({
     loading: false,
     error: null,
     todos: [],
-    incrementCounter: vi.fn()
+    refetch: vi.fn().mockResolvedValue({}),
+    createTodo: vi.fn(),
+    toggleTodo: vi.fn(),
+    deleteTodo: vi.fn(),
+    updatePriority: vi.fn()
   })
 }));
 
-it('should render with items prop', () => {
+it('should render with proper UI', () => {
   const { container } = render(<BasicTodoList />);
   expect(container).toBeTruthy();
 });

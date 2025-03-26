@@ -1,13 +1,12 @@
 import { TodoItem } from '@dras/todo-app.entities.todo-item';
 import { TodoList } from './todo-list.js';
 
+// Basic todo list component for testing
 export const BasicTodoList = () => {
-  const mockItems = [
-    new TodoItem('1', 'Complete the task', false),
-    new TodoItem('2', 'Review the PR', true)
-  ];
+  // Note: We no longer use initialTodos directly
+  // Instead, we're relying on the Apollo mock provider in the actual component
   
   return (
-    <TodoList items={mockItems} />
+    <TodoList />
   );
 }
