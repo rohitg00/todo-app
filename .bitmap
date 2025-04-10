@@ -54,16 +54,14 @@
     "todo-item": {
         "name": "todo-item",
         "scope": "dras.todo-app",
-        "version": "0.0.3",
+        "version": "0.0.2",
         "mainFile": "index.ts",
-        "rootDir": "todo-app/todo-item"
-    },
-    "ui/enhanced-todo-item": {
-        "name": "ui/enhanced-todo-item",
-        "scope": "dras.todo-app",
-        "version": "0.0.7",
-        "mainFile": "index.ts",
-        "rootDir": "todo-app/ui/enhanced-todo-item"
+        "rootDir": "todo-app/todo-item",
+        "config": {
+            "teambit.component/remove": {
+                "removed": false
+            }
+        }
     },
     "ui/rich-text-editor": {
         "name": "ui/rich-text-editor",
