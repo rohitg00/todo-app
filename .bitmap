@@ -12,82 +12,77 @@
     "context/apollo-todo-provider": {
         "name": "context/apollo-todo-provider",
         "scope": "dras.todo-app",
-        "version": "0.0.5",
+        "version": "0.0.7",
         "mainFile": "index.ts",
         "rootDir": "todo-app/context/apollo-todo-provider"
     },
     "entities/todo-item": {
         "name": "entities/todo-item",
         "scope": "dras.todo-app",
-        "version": "0.0.5",
+        "version": "0.0.7",
         "mainFile": "index.ts",
         "rootDir": "todo-app/entities/todo-item"
     },
     "hooks/use-todo-list": {
         "name": "hooks/use-todo-list",
         "scope": "dras.todo-app",
-        "version": "0.0.8",
+        "version": "0.0.10",
         "mainFile": "index.ts",
         "rootDir": "todo-app/hooks/use-todo-list"
     },
     "pages/todo-page": {
         "name": "pages/todo-page",
         "scope": "dras.todo-app",
-        "version": "0.0.15",
+        "version": "0.0.17",
         "mainFile": "index.ts",
         "rootDir": "todo-app/pages/todo-page"
     },
     "servers/todo-server": {
         "name": "servers/todo-server",
         "scope": "dras.todo-app",
-        "version": "0.0.6",
+        "version": "0.0.8",
         "mainFile": "index.ts",
         "rootDir": "todo-app/servers/todo-server"
     },
     "todo-app": {
         "name": "todo-app",
         "scope": "dras.todo-app",
-        "version": "0.0.15",
+        "version": "0.0.21",
         "mainFile": "index.ts",
         "rootDir": "todo-app/todo-app"
     },
     "todo-item": {
         "name": "todo-item",
         "scope": "dras.todo-app",
-        "version": "0.0.2",
+        "version": "0.0.4",
         "mainFile": "index.ts",
-        "rootDir": "todo-app/todo-item",
-        "config": {
-            "teambit.component/remove": {
-                "removed": false
-            }
-        }
+        "rootDir": "todo-app/todo-item"
     },
     "ui/rich-text-editor": {
         "name": "ui/rich-text-editor",
         "scope": "dras.todo-app",
-        "version": "0.0.6",
+        "version": "0.0.8",
         "mainFile": "index.ts",
         "rootDir": "todo-app/ui/rich-text-editor"
     },
     "ui/sidebar": {
         "name": "ui/sidebar",
         "scope": "dras.todo-app",
-        "version": "0.0.6",
+        "version": "0.0.8",
         "mainFile": "index.ts",
         "rootDir": "todo-app/ui/sidebar"
     },
     "ui/todo-item": {
         "name": "ui/todo-item",
         "scope": "dras.todo-app",
-        "version": "0.0.3",
+        "version": "0.0.5",
         "mainFile": "index.ts",
         "rootDir": "todo-app/ui/todo-item"
     },
     "ui/todo-list": {
         "name": "ui/todo-list",
         "scope": "dras.todo-app",
-        "version": "0.0.11",
+        "version": "0.0.13",
         "mainFile": "index.ts",
         "rootDir": "todo-app/ui/todo-list"
     },
