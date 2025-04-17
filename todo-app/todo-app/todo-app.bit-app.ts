@@ -1,4 +1,17 @@
 import { ViteReact } from '@bitdev/react.app-types.vite-react';
+import {
+  Netlify,
+  NetlifyOptions,
+} from '@teambit/cloud-providers.deployers.netlify';
+
+const netlifyConfig: NetlifyOptions = {
+  accessToken: process.env.NETLIFY_AUTH_TOKEN as string,
+  productionSiteName: 'dras-todo-app',
+  stagingSiteName: 'dras-todo-app-staging',
+  team: 'dras',
+};
+
+const netlify = new Netlify(netlifyConfig);
 
 export default ViteReact.from({
   /**
@@ -27,7 +40,7 @@ export default ViteReact.from({
   /**
    * pipeline for deployment of the app.
    */
-  // deploy: (context) => {},
+  deploy: Netlify.deploy(netlifyConfig),
 
   /**
    * configure port range for the dev server to use.

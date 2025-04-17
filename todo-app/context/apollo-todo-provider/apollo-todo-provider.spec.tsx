@@ -4,6 +4,6 @@ import { BasicApolloTodoProvider } from './apollo-todo-provider.composition.js';
 
 it('should render the correct text', () => {
   const { getByText } = render(<BasicApolloTodoProvider />);
-  const rendered = getByText('hello world!');
+  const rendered = getByText('Mock provider active for previews!');
   expect(rendered).toBeTruthy();
 });

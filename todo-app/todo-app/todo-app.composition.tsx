@@ -4,7 +4,7 @@ import { TodoApp } from "./todo-app.js";
 export const TodoAppBasic = () => {
   return (
     <MemoryRouter>
-      <TodoApp />
+      <TodoApp mock={true} />
     </MemoryRouter>
   );
 }

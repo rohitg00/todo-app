@@ -57,6 +57,7 @@
         "@apollo/subgraph": "^2.10.0",
         "@bitdev/node.node-server": "^1.0.6",
         "@bitdev/react.app-types.vite-react": "^2.1.4",
+        "@teambit/cloud-providers.deployers.netlify": "^0.1.31",
         "@types/uuid": "^10.0.0",
         "@vitejs/plugin-react": "^4.3.4",
         "draft-js": "^0.11.7",

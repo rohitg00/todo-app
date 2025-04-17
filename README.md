@@ -14,25 +14,18 @@ The application is built with a component-driven architecture, where each compon
 
 ```
 dras.todo-app/
-├── context/
-│   ├── apollo-client (v0.0.2) - Apollo GraphQL client configuration
-│   └── apollo-todo-provider (v0.0.1) - Apollo context provider for todos
-├── entities/
-│   └── todo-item (v0.0.1) - Todo item data model
 ├── hooks/
-│   └── use-todo-list (v0.0.4) - Custom hook for managing todo lists
+│   └── use-todo-list - Custom hook for managing todo lists
 ├── pages/
-│   └── todo-page (v0.0.11) - Main todo page layout
+│   └── todo-page - Main todo page layout
 ├── servers/
-│   └── todo-server (v0.0.2) - GraphQL server implementation
-├── todo-app (v0.0.11) - Main application component
-├── todo-item (v0.0.1) - Basic todo item component
+│   └── todo-server - GraphQL server implementation
+├── todo-app - Main application component
 └── ui/
-    ├── enhanced-todo-item (v0.0.5) - Enhanced todo item with additional features
-    ├── enhanced-todo-list (v0.0.6) - Enhanced todo list component
-    ├── rich-text-editor (v0.0.3) - Rich text editor for todo content
-    ├── sidebar (v0.0.3) - Application sidebar
-    └── todo-list (v0.0.7) - Basic todo list component
+    ├── todo-list - Todo list component
+    ├── rich-text-editor - Rich text editor for todo content
+    ├── sidebar - Application sidebar
+    └── todo-item - Todo item UI component
 ```
 
 ## 🚀 Getting Started
@@ -82,9 +75,6 @@ bit create react pages/todo-page
 bit create react-app todo-app
 bit create react ui/sidebar
 bit create react ui/rich-text-editor
-bit create react ui/enhanced-todo-item
-bit create react ui/enhanced-todo-list
-bit create react context/apollo-client
 ```
 
 #### Installing Dependencies
