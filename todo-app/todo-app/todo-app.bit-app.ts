@@ -6,8 +6,8 @@ import {
 
 const netlifyConfig: NetlifyOptions = {
   accessToken: process.env.NETLIFY_AUTH_TOKEN as string,
-  productionSiteName: 'dras-todo-app-abc',
-  stagingSiteName: 'dras-todo-app-staging-abc',
+  productionSiteName: 'dras-todo-app',
+  stagingSiteName: 'dras-todo-app-staging',
   team: 'dras',
 };
 

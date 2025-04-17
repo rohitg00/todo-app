@@ -161,8 +161,9 @@ export function ApolloTodoProvider({ mock = false, children, serverUrl = 'http:/
         mocks={mocks} 
         addTypename={false}
         defaultOptions={{
-          mutate: { errorPolicy: 'all' },
-          query: { errorPolicy: 'all' }
+          watchQuery: { fetchPolicy: 'cache-first' },
+          query: { fetchPolicy: 'cache-first', errorPolicy: 'all' },
+          mutate: { errorPolicy: 'all' }
         }}
       >
         {children}

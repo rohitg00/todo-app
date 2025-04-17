@@ -12,10 +12,13 @@ export type TodoAppProps = {
   serverUrl?: string;
 };
 
-export function TodoApp({ mock = false, serverUrl = "http://localhost:5001/graphql" }: TodoAppProps) {
+export function TodoApp({ mock = true, serverUrl = "http://localhost:5001/graphql" }: TodoAppProps) {
+  // Force mock to true for Netlify deployment
+  const useMock = true;
+  
   return (
     <Routes>
-      <Route path="/" element={<TodoPage serverUrl={serverUrl} mock={mock} />} />
+      <Route path="/" element={<TodoPage serverUrl={serverUrl} mock={useMock} />} />
     </Routes>
   );
 }

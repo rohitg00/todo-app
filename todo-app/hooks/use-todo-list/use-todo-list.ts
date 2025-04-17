@@ -51,7 +51,7 @@ export function useTodoList() {
   
   // Query to fetch all todos
   const { data, loading, error, refetch } = useQuery(GET_TODOS, {
-    fetchPolicy: 'network-only',
+    fetchPolicy: 'cache-first',
     notifyOnNetworkStatusChange: true,
     errorPolicy: 'all',
   });
